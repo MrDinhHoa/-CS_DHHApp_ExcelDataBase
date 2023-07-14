@@ -40,9 +40,9 @@ namespace _01_TrackingTuanThuTLTT
         {
             this.tab1 = this.Factory.CreateRibbonTab();
             this.group1 = this.Factory.CreateRibbonGroup();
+            this.button_loadData = this.Factory.CreateRibbonButton();
             this.button_daily = this.Factory.CreateRibbonButton();
             this.button_Monthly = this.Factory.CreateRibbonButton();
-            this.button_loadData = this.Factory.CreateRibbonButton();
             this.tab1.SuspendLayout();
             this.group1.SuspendLayout();
             this.SuspendLayout();
@@ -62,6 +62,14 @@ namespace _01_TrackingTuanThuTLTT
             this.group1.Label = "Tracking";
             this.group1.Name = "group1";
             // 
+            // button_loadData
+            // 
+            this.button_loadData.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
+            this.button_loadData.Label = "Load Dữ Liệu";
+            this.button_loadData.Name = "button_loadData";
+            this.button_loadData.ShowImage = true;
+            this.button_loadData.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.LoadData_Click);
+            // 
             // button_daily
             // 
             this.button_daily.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
@@ -79,14 +87,6 @@ namespace _01_TrackingTuanThuTLTT
             this.button_Monthly.Name = "button_Monthly";
             this.button_Monthly.ShowImage = true;
             this.button_Monthly.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.Monthly_Click);
-            // 
-            // button_loadData
-            // 
-            this.button_loadData.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
-            this.button_loadData.Label = "Load Dữ Liệu";
-            this.button_loadData.Name = "button_loadData";
-            this.button_loadData.ShowImage = true;
-            this.button_loadData.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.LoadData_Click);
             // 
             // Ribbon_Excel
             // 
